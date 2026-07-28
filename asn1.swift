@@ -42,7 +42,9 @@ else{
     print("First name and last name are not same")
 }
 
-var summary: String
-summary = "Registration Successful"
-summary += " " + "- Welcome to the iOS Development Centre!"
-print(summary)
+var summary = ""
+if summary.isEmpty{
+    summary = "Registration Successful"
+    summary += " " + "- Welcome to the iOS Development Centre!"
+    print(summary)
+}
