@@ -10,7 +10,8 @@ print("Welcome, \(firstName.capitalized) \(lastName.capitalized)!")
 
 if username.lowercased().hasPrefix(firstName.prefix(3).lowercased()) && username.contains("_"){
     print("Valid Username")
-} else {
+}
+else{
     print("Invalid Username")
 }
 
