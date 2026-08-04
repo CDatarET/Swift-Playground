@@ -52,3 +52,53 @@ let h2 = Account(accNum: 4, holderName: "Jane", balance: 45000)
 h1.getName()
 h1.checkBalance()
 print(h1.isEligible)
+
+class Animal{
+    let type: String
+    init(type: String){
+        self.type = type
+    }
+    
+    func makeNoise(){
+        
+    }
+}
+
+class Dog: Animal{
+    let legs: Int
+    
+    init(legs: Int){
+        self.legs = legs
+        super.init(type: "Dog")
+    }
+    
+    override func makeNoise(){
+        print("Bark! Bark!")
+    }
+}
+
+class Cat: Animal{
+    override func makeNoise(){
+        print("Meow!")
+    }
+}
+
+class GoldenRetriever: Dog{
+    let color = "Yellow"
+    override func makeNoise(){
+        print("Golden Retriever is Barking!")
+    }
+}
+
+class Labrador: Dog{
+    let color: String
+    
+    init(color: String){
+        self.color = color
+        super.init(legs: 4)
+    }
+    
+    override func makeNoise(){
+        print("Labrador is Barking!")
+    }
+}
