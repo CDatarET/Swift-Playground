@@ -37,4 +37,3 @@ struct temperaure{
         self.celcius = celsius;
     }
 }
-
