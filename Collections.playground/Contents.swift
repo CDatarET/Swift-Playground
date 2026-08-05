@@ -16,3 +16,9 @@ var arr3 = [1, 2, 3]
 var arr4 = [4, 5, 6]
 var arr5 = [arr3, arr4]
 print(arr5)
+
+var d1 = ["a": 0, "b": 1, "c": 2, "d": 3]
+print(d1["b"]!)
+d1["b"] = 2
+print(d1)
+
