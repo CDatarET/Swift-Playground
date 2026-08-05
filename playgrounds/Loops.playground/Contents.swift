@@ -10,3 +10,7 @@ var s = "Hello World"
 for c in s{
     print(c)
 }
+
+for (index, char) in s.enumerated(){
+    print("\(index): \(char)")
+}
