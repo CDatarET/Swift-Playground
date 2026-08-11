@@ -7,7 +7,7 @@
 
  Create a dictionary `paces` of type [String: Double] and assign it a dictionary literal with "Easy", "Medium", and "Fast" keys corresponding to values of 10.0, 8.0, and 6.0. These numbers correspond to mile pace in minutes. Print the dictionary.
  */
-var paces = ["Easy": 10.0, "Medium": 8.0, "Fast": 6.0]
+var paces: [String: Double] = ["Easy": 10.0, "Medium": 8.0, "Fast": 6.0]
 print(paces)
 //:  Add a new key/value pair to the dictionary. The key should be "Sprint" and the value should be 4.0. Print the dictionary.
 paces["Sprint"] = 4.0
@@ -19,7 +19,7 @@ paces["Fast"] = 5.8
 paces.removeValue(forKey: "Sprint")
 print(paces)
 //:  When a user chooses a pace, you want the app to print a statement stating that it will keep him/her on pace. Imagine a user chooses "Medium." Accessing the value from the dictionary, print a statement saying "Okay! I'll keep you at a <INSERT PACE VALUE HERE> minute mile pace."
-print("Okay! I'll keep you at a \(if let x = paces["Medium"]{}) minute mile pace.")
+print("Okay! I'll keep you at a \(paces["Medium"]!) minute mile pace.")
 /*:
  _Copyright © 2023 Apple Inc._
 
