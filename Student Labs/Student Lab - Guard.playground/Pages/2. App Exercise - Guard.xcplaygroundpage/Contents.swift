@@ -10,8 +10,24 @@ import UIKit
 
  Write a failable initializer that takes parameters for your start and end times, and then checks to see if they are greater than 10 seconds apart using a guard statement. If they are, your initializer should fail. Otherwise, the initializer should set the properties accordingly.
  */
+struct workout{
+    var startTime: Double
+    var endTime: Double
+    
+    init?(st: Double, et: Double){
+        guard et - st > 10 else{
+            return nil
+        }
+        
+        startTime = st
+        endTime = et
+    }
+}
 
-
+let wk1 = workout(st: 0, et: 11)
+print(wk1!)
+let wk2 = workout(st: 0, et: 9)
+print(wk2)
 /*:
  Imagine a screen where a user inputs a meal that they've eaten. If the user taps a "save" button without adding any food, you might want to prompt the user that they haven't actually added anything.
 
@@ -26,11 +42,17 @@ let foodTextField = UITextField()
 let caloriesTextField = UITextField()
 
 foodTextField.text = "Banana"
-caloriesTextField.text = "23"
+caloriesTextField.text = "23z"
 
-
+func logFood() -> Food?{
+    guard let fname = foodTextField.text, let cal = caloriesTextField.text else{
+        return nil
+    }
+    
+    return Food(name: fname, calories: Int(cal)!)
+}
 //:  Call the function you made above and capture the return value. Unwrap the `Food` object with standard optional binding and print a statement about the food using each of its properties. Go back and change the text in `caloriesTextField` to a string that cannot be converted into a number. What happens in that case?
-
+print(logFood()) //changing the value makes it nil which throws error
 
 /*:
  _Copyright © 2023 Apple Inc._
