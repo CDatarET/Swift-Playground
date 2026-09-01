@@ -54,8 +54,9 @@ firstNameTextField.text = "Christine"
 lastNameTextField.text = "Huang"
 ageTextField.text = "28"
 
-
-
+func createUser() -> User?{
+    return nil
+}
 //:  Call the function you made above and capture the return value. Unwrap the `User` with standard optional binding and print a statement using each of its properties.
 
 
