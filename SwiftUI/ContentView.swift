@@ -1,3 +1,5 @@
+// xcode: set sdk=iOS
+
 import SwiftUI
 
 struct ContentView: View{
@@ -16,4 +18,8 @@ struct ContentView: View{
                 .background(.green)
         }        
     }
+}
+
+#Preview {
+    ContentView()
 }
