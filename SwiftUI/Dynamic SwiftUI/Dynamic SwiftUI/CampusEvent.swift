@@ -2,7 +2,7 @@
 //  CampusEvent.swift
 //  Dynamic SwiftUI
 //
-//  Created by iOS SDP Mac94 on 06/10/26.
+//  Created by CDatarET on 06/10/26.
 //
 
 import Foundation

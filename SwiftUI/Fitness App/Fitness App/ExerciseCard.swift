@@ -2,12 +2,12 @@
 //  SwiftUIView.swift
 //  Fitness App
 //
-//  Created by iOS SDP Mac94 on 06/10/26.
+//  Created by CDatarET on 06/10/26.
 //
 
 import SwiftUI
 
-struct ExerciseCard: View {
+struct ExerciseCard : View {
     let exercise: Exercise
     
     var body: some View {
