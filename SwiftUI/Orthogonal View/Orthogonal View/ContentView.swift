@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Orthogonal View
 //
-//  Created by iOS SDP Mac94 on 14/10/26.
+//  Created by CDatarET on 14/10/26.
 //
 
 import SwiftUI
