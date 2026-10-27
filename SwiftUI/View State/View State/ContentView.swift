@@ -50,6 +50,20 @@ struct ChildView: View{
     }
 }
 
+struct Folder : Identifiable{
+    let id = UUID()
+    let name: String
+    let icon: String
+    let SubFolders: [Folder]?
+}
+
+struct Messages: View{
+    let folders: [Folder]
+    var body: some View{
+        
+    }
+}
+
 #Preview {
     ContentView()
 }
