@@ -8,14 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var backgroundColor = Color.mint
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ChildView(backgroundColor: $backgroundColor)
+        @State var groceries = ["Milk", "Bread", "Noodles", "Onions", "Garlic"]
+        @State var locations = ["Trader Joe's", "Walmart", "Costco", "T&T", "Central Market"]
+        
+        backgroundColor
+        .ignoresSafeArea()
+        .overlay{
+            VStack{
+                Spacer()
+                
+                List{
+                    Text("Groceries")
+                        .font(.title)
+                        .bold()
+                    
+                    ForEach(groceries, id: \.self) { item in
+                        Text(item)
+                    }
+                    
+                    Text("Locations")
+                        .font(.title)
+                        .bold()
+                    
+                    ForEach(locations, id: \.self) { item in
+                        Text(item)
+                    }
+                }
+                .padding()
+            }
         }
-        .padding()
+    }
+}
+
+struct ChildView: View{
+    @Binding var backgroundColor: Color
+    var body: some View{
+        
     }
 }
 
